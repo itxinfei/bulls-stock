@@ -19,10 +19,16 @@
             <version>0.6.0</version>
         </dependency>
         <!-- ceph fs 操作依赖 -->
-        <dependency>
+        <!--<dependency>
             <groupId>com.ceph</groupId>
             <artifactId>libcephfs</artifactId>
             <version>0.80.5</version>
+        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/io.github.opendataio/libcephfs -->
+        <dependency>
+            <groupId>io.github.opendataio</groupId>
+            <artifactId>libcephfs</artifactId>
+            <version>0.0.1</version>
         </dependency>
         <!-- ceph swift 依赖 -->
         <dependency>

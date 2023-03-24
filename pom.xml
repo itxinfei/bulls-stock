@@ -16,7 +16,6 @@
         <module>bulls-stock-common</module>
         <module>bulls-stock-entity</module>
         <module>bulls-trade-oauth</module>
-        <module>mybatis-generator</module>
         <module>bulls-stock-starter</module>
         <module>bulls-stock-admin-user</module>
         <module>bulls-stock-quote</module>
@@ -27,6 +26,7 @@
         <module>bulls-stock-position</module>
         <module>bulls-stock-finance</module>
         <module>bulls-stock-task</module>
+        <module>mybatis-generator</module>
         <module>cat-demo</module>
         <module>hateoas-demo</module>
         <module>grpc-demo</module>
@@ -47,7 +47,7 @@
         <spring-boot.version>2.1.6.RELEASE</spring-boot.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-jar-plugin.version>3.1.0</maven-jar-plugin.version>
         <swagger.version>2.9.2</swagger.version>
         <postgresql.version>42.2.5</postgresql.version>
@@ -124,6 +124,7 @@
         <!-- 设置maven 编译插件 -->
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven-compiler-plugin.version}</version>
                 <configuration>

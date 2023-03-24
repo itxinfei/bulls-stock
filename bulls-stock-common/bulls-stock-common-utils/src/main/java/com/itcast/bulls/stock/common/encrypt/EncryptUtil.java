@@ -4,8 +4,6 @@ import com.itcast.bulls.stock.common.exception.ComponentException;
 import com.itcast.bulls.stock.common.exception.constants.ApplicationErrorCodeEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
 
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
@@ -13,27 +11,30 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESedeKeySpec;
 import java.security.MessageDigest;
 import java.security.SecureRandom;
+import java.util.Base64;
 
 /**
  * <p>Description: </p>
- * @date 2020/1/2
- * @author 贺锟 
+ *
+ * @author 贺锟
  * @version 1.0
  * <p>Copyright:Copyright(c)2019</p>
+ * @date 2020/1/2
  */
-@SuppressWarnings("restriction")
+//@SuppressWarnings("restriction")
+//警告: BASE64Decoder是内部专用 API, 可能会在未来发行版中删除
+@SuppressWarnings("all")
 public class EncryptUtil {
 
     private static final Logger logger = LoggerFactory.getLogger(EncryptUtil.class);
 
-
-    private final static char[] hexDigits = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd',
-            'e', 'f' };
+    private final static char[] hexDigits = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd',
+            'e', 'f'};
     public static String BASE64Encrypt;
 
     public final static String MD5ToString(String signed) {
 
-        char hexDigits[] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
+        char hexDigits[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
         try {
 
             byte[] res = signed.getBytes("UTF-8");
@@ -79,7 +80,7 @@ public class EncryptUtil {
      * MD5 ("message digest") = f96b697d7cb7938d525a2f31aaf161d0
      * MD5 ("abcdefghijklmnopqrstuvwxyz") = c3fcd3d76192e4007dfb496cca67e13b
      *
-     * @param res 源字符串
+     * @param str 源字符串
      * @return md5值
      */
     public final static byte[] MD5EncrtyReutrnhexDigitsByteArray(String str) {
@@ -133,7 +134,8 @@ public class EncryptUtil {
     public static String BASE64Encrypt(byte[] key) throws ComponentException {
         String edata = null;
         try {
-            edata = (new BASE64Encoder()).encodeBuffer(key).trim();
+            edata = Base64.getEncoder().encodeToString(key);
+            //edata = (new BASE64Encoder()).encodeBuffer(key).trim();
         } catch (Exception e) {
             throw new ComponentException(ApplicationErrorCodeEnum.SYS_ERROR_ENCRYPT_SINGED,
                     "BASE64编码错误！key=" + new String(key) + ", error=" + e.getMessage());
@@ -144,7 +146,7 @@ public class EncryptUtil {
     /**
      * BASE64解密
      *
-     * @param key
+     * @param data
      * @return
      * @throws Exception
      */
@@ -153,7 +155,8 @@ public class EncryptUtil {
             return null;
         byte[] edata = null;
         try {
-            edata = (new BASE64Decoder()).decodeBuffer(data);
+            edata = Base64.getDecoder().decode(data);
+            //edata = (new BASE64()).decodeBuffer(data);
             return edata;
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
@@ -162,11 +165,10 @@ public class EncryptUtil {
     }
 
     /**
-     *
      * @param key 24位密钥
      * @param str 源字符串
      * @return
-     * @throws EncryptException
+     * @throws
      */
     public static byte[] DES3Encrypt(String key, String str) throws ComponentException {
 
@@ -201,7 +203,7 @@ public class EncryptUtil {
     /**
      * 解密
      *
-     * @param data
+     * @param edata
      * @param key
      * @return
      * @throws Exception
@@ -232,16 +234,17 @@ public class EncryptUtil {
     /**
      * 方法用途: 签名加密<br>
      * 实现步骤: <br>
-     * @param signStr ：签名的字符串
+     *
+     * @param signed ：签名的字符串
      * @return
      */
-    public static String encryptSigned(String signed) throws ComponentException{
+    public static String encryptSigned(String signed) throws ComponentException {
 
         try {
             byte[] md5SignStr = MD5EncrtyReutrnhexDigitsByteArray(signed);
             String b64SignStr = BASE64Encrypt(md5SignStr);
             return b64SignStr;
-        }catch(Exception e) {
+        } catch (Exception e) {
             throw new ComponentException(ApplicationErrorCodeEnum.SYS_ERROR_ENCRYPT_SINGED,
                     "BASE64或MD5加密签名错误！signed=" + signed + ", error=" + e.getMessage());
         }
@@ -252,9 +255,8 @@ public class EncryptUtil {
         return b64SignStr;
     }
 
-    public static void main(String[] args) throws  Exception {
+    public static void main(String[] args) throws Exception {
         System.out.println(encryptSigned("app"));
         System.out.println(encryptSigned("123"));
     }
-
 }

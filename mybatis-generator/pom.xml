@@ -49,7 +49,7 @@
                     <verbose>true</verbose>
                     <overwrite>true</overwrite>
                 </configuration>
-                <dependencies>
+                <!--<dependencies>
                     <dependency>
                         <groupId>mysql</groupId>
                         <artifactId>mysql-connector-java</artifactId>
@@ -60,7 +60,7 @@
                         <artifactId>mybatis-generator</artifactId>
                         <version>1.0-SNAPSHOT</version>
                     </dependency>
-                </dependencies>
+                </dependencies>-->
             </plugin>
         </plugins>
     </build>

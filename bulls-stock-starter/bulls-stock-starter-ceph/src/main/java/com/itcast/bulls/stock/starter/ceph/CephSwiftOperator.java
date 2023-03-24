@@ -106,7 +106,7 @@ public class CephSwiftOperator {
     /**
      * 文件上传的处理接口(字节数组形式)
      * @param remoteName
-     * @param filePath
+     * @param inputStream
      */
     public void createObject(String remoteName, byte[] inputStream) {
         // 1. 从容器当中获取远程存储对象信息
