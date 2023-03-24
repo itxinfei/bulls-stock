@@ -11,10 +11,9 @@
 
     <artifactId>nacos-discovery-demo</artifactId>
     <packaging>pom</packaging>
+
     <modules>
         <module>nacos-discovery-server</module>
         <module>nacos-discovery-client</module>
     </modules>
-
-
 </project>

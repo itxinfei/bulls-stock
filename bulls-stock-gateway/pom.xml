@@ -11,9 +11,7 @@
 
     <artifactId>bulls-stock-gateway</artifactId>
 
-
     <dependencies>
-
         <!--gateway 网关依赖-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -29,7 +27,6 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
-
         <!-- swagger 组件依赖 -->
         <dependency>
             <groupId>com.itcast.trade</groupId>
@@ -46,8 +43,5 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
     </dependencies>
-
-
 </project>

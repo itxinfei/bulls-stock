@@ -8,16 +8,11 @@
     <artifactId>bulls-stock</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
+    <description>智牛股</description>
+
     <modules>
         <module>bulls-stock-gateway</module>
         <module>bulls-stock-user</module>
-        <module>cat-demo</module>
-        <module>hateoas-demo</module>
-        <module>grpc-demo</module>
-        <module>seata-demo</module>
-        <module>nacos-demo</module>
-        <module>ceph-demo</module>
-        <module>netty-demo</module>
         <module>bulls-stock-common</module>
         <module>bulls-stock-entity</module>
         <module>bulls-trade-oauth</module>
@@ -32,11 +27,18 @@
         <module>bulls-stock-position</module>
         <module>bulls-stock-finance</module>
         <module>bulls-stock-task</module>
+        <module>cat-demo</module>
+        <module>hateoas-demo</module>
+        <module>grpc-demo</module>
+        <module>seata-demo</module>
+        <module>nacos-demo</module>
+        <module>ceph-demo</module>
+        <module>netty-demo</module>
     </modules>
-
 
     <!-- 自定义属性， 统一管理版本 -->
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.cloud.alibaba.version>2.1.1.RELEASE</spring.cloud.alibaba.version>
         <spring-cloud-gateway.version>2.1.2.RELEASE</spring-cloud-gateway.version>
         <spring-cloud-starter.version>2.1.1.RELEASE</spring-cloud-starter.version>
@@ -82,7 +84,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
             <!-- Gateway组件 -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -91,7 +92,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
             <!-- Spring Boot 组件 -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -100,7 +100,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
         </dependencies>
 
     </dependencyManagement>
@@ -159,7 +158,4 @@
             </plugins>
         </pluginManagement>
     </build>
-
-
-
 </project>

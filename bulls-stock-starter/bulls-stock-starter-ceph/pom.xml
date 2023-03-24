@@ -18,14 +18,12 @@
             <artifactId>rados</artifactId>
             <version>0.6.0</version>
         </dependency>
-
         <!-- ceph fs 操作依赖 -->
         <dependency>
             <groupId>com.ceph</groupId>
             <artifactId>libcephfs</artifactId>
             <version>0.80.5</version>
         </dependency>
-
         <!-- ceph swift 依赖 -->
         <dependency>
             <groupId>org.javaswift</groupId>
@@ -33,6 +31,4 @@
             <version>0.10.2</version>
         </dependency>
     </dependencies>
-
-
 </project>

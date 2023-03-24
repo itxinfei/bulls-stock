@@ -11,8 +11,6 @@
 
     <artifactId>cat-demo-gateway</artifactId>
 
-
-
     <build>
         <plugins>
             <plugin>
@@ -21,5 +19,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

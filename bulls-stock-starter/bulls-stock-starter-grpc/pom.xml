@@ -11,7 +11,6 @@
 
     <artifactId>bulls-stock-starter-grpc</artifactId>
 
-
     <dependencies>
         <!-- spring boot grpc 相关依赖 -->
         <dependency>
@@ -29,6 +28,5 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
-
     </dependencies>
 </project>

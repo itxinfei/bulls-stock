@@ -11,7 +11,6 @@
 
     <artifactId>grpc-server</artifactId>
 
-
     <dependencies>
         <!-- 添加 Grpc lib 依赖 -->
         <dependency>
@@ -19,7 +18,5 @@
             <artifactId>grpc-lib</artifactId>
             <version>1.0.0</version>
         </dependency>
-
     </dependencies>
-
 </project>

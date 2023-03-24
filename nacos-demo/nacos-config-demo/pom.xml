@@ -11,15 +11,11 @@
 
     <artifactId>nacos-config-demo</artifactId>
 
-
     <dependencies>
-
         <!-- Nacos 配置中心的依赖 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-alibaba-nacos-config</artifactId>
         </dependency>
-
     </dependencies>
-
 </project>

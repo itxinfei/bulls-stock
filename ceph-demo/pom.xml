@@ -11,14 +11,12 @@
 
     <artifactId>ceph-demo</artifactId>
 
-
     <dependencies>
         <!-- Spring Boot 依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <!-- Rados Java Api依赖 -->
         <dependency>
             <groupId>com.ceph</groupId>
@@ -31,17 +29,13 @@
             <artifactId>libcephfs</artifactId>
             <version>0.80.5</version>
         </dependency>
-
         <!-- Swift Api 依赖 -->
         <dependency>
             <groupId>org.javaswift</groupId>
             <artifactId>joss</artifactId>
             <version>0.10.2</version>
-
         </dependency>
-
     </dependencies>
-
 
     <build>
         <plugins>
@@ -51,5 +45,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

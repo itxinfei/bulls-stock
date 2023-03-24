@@ -11,11 +11,11 @@
 
     <artifactId>netty-demo</artifactId>
     <packaging>pom</packaging>
+
     <modules>
         <module>netty-server</module>
         <module>netty-client</module>
     </modules>
-
 
     <dependencies>
         <!-- Netty 核心组件依赖 -->
@@ -25,6 +25,4 @@
             <version>4.1.16.Final</version>
         </dependency>
     </dependencies>
-
-
 </project>

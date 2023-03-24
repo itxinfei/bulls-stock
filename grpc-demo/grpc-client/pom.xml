@@ -11,7 +11,6 @@
 
     <artifactId>grpc-client</artifactId>
 
-
     <dependencies>
         <!-- 添加 Grpc lib 依赖-->
         <dependency>
@@ -19,13 +18,10 @@
             <artifactId>grpc-lib</artifactId>
             <version>1.0.0</version>
         </dependency>
-
         <!-- 添加 Spring Boot 依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
     </dependencies>
-
 </project>

@@ -11,7 +11,6 @@
 
     <artifactId>bulls-stock-starter-swagger</artifactId>
 
-
     <dependencies>
         <!-- Swagger API文档 -->
         <dependency>
@@ -33,14 +32,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-rest</artifactId>
         </dependency>
-
         <!-- Swagger ui 风格 组件-->
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>swagger-bootstrap-ui</artifactId>
             <version>1.9.3</version>
         </dependency>
-
         <!-- swagger 支持 data rest 接口的依赖 -->
         <dependency>
             <groupId>io.springfox</groupId>
@@ -48,6 +45,4 @@
             <version>${swagger.version}</version>
         </dependency>
     </dependencies>
-
-
 </project>

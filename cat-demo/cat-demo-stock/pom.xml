@@ -11,7 +11,6 @@
 
     <artifactId>cat-demo-stock</artifactId>
 
-
     <build>
         <plugins>
             <plugin>
@@ -20,5 +19,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

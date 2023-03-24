@@ -23,7 +23,6 @@
             <artifactId>bulls-stock-common-utils</artifactId>
             <version>${project.stock.version}</version>
         </dependency>
-
         <!-- Redis 分布式锁依赖组件 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -34,5 +33,4 @@
             <artifactId>spring-integration-redis</artifactId>
         </dependency>
     </dependencies>
-
 </project>

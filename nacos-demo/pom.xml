@@ -11,11 +11,11 @@
 
     <artifactId>nacos-demo</artifactId>
     <packaging>pom</packaging>
+
     <modules>
         <module>nacos-config-demo</module>
         <module>nacos-discovery-demo</module>
     </modules>
-
 
     <dependencies>
         <!-- Spring Boot 依赖-->
@@ -23,13 +23,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <!-- Nacos服务注册发现依赖 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
     </dependencies>
-
-
 </project>

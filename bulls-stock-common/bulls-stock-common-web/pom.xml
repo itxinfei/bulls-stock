@@ -17,15 +17,11 @@
             <artifactId>bulls-stock-common-utils</artifactId>
             <version>${project.stock.version}</version>
         </dependency>
-
         <!-- 自动化校验 -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
             <version>6.0.16.Final</version>
         </dependency>
-
     </dependencies>
-
-
 </project>

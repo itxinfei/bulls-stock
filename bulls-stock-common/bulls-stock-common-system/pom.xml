@@ -17,6 +17,4 @@
             <version>${project.stock.version}</version>
         </dependency>
     </dependencies>
-
-
 </project>

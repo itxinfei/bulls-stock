@@ -11,85 +11,71 @@
 
     <artifactId>bulls-trade-oauth</artifactId>
 
-
     <dependencies>
-
         <!-- OATUH2 的核心组件 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-oauth2</artifactId>
             <version>${spring-cloud-starter.version}</version>
         </dependency>
-
         <!-- Spring Security 依赖 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-security</artifactId>
             <version>${spring-cloud-starter.version}</version>
         </dependency>
-
         <!-- 自动化缓存依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-cache</artifactId>
             <version>${spring-cloud-starter.version}</version>
         </dependency>
-
         <!--缓存依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
             <version>${spring-cloud-starter.version}</version>
         </dependency>
-
         <!-- jpa -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
             <version>${spring-cloud-starter.version}</version>
         </dependency>
-
         <!-- Nacos服务注册发现依赖 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
-
-
         <!-- 公用utils工具的依赖 -->
         <dependency>
             <groupId>com.itcast.trade</groupId>
             <artifactId>bulls-stock-common-utils</artifactId>
             <version>${project.stock.version}</version>
         </dependency>
-
         <!-- 公用实体的依赖 -->
         <dependency>
             <groupId>com.itcast.trade</groupId>
             <artifactId>bulls-stock-entity</artifactId>
             <version>${project.stock.version}</version>
         </dependency>
-
         <!-- druid 连接池依赖 -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
             <version>${druid.version}</version>
         </dependency>
-
         <!-- 解决druid log4j监控组件无法使用问题， 不用再额外增加其他LOG框架 -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
         </dependency>
-
         <!-- mysql-connector-java -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.14</version>
         </dependency>
-
         <!--freemarker-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -105,7 +91,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
         </dependency>
-
     </dependencies>
 
 
@@ -115,6 +100,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
+                <version>3.2.0</version>
                 <executions>
                     <execution>
                         <id>default-resources</id>
@@ -157,7 +143,5 @@
                 </executions>
             </plugin>
         </plugins>
-
     </build>
-
 </project>

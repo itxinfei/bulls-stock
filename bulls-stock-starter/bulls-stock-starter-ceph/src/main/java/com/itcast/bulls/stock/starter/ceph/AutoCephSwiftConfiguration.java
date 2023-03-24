@@ -7,11 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * <p>Description: </p>
- * @date 
- * @author 
- * @version 1.0
- * <p>Copyright:Copyright(c)2020</p>
+ * @author Administrator
  */
 @Configuration
 @EnableAutoConfiguration

@@ -11,6 +11,7 @@
 
     <artifactId>bulls-stock-starter</artifactId>
     <packaging>pom</packaging>
+
     <modules>
         <module>bulls-stock-starter-ceph</module>
         <module>bulls-stock-starter-swagger</module>
@@ -25,5 +26,4 @@
             <artifactId>spring-boot-actuator-autoconfigure</artifactId>
         </dependency>
     </dependencies>
-
 </project>
